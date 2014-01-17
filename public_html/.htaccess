@@ -1,0 +1,11 @@
+RewriteEngine On
+# Absolute matching
+#RewriteRule    ^about    ?page=about    [NC,L]    
+#RewriteRule    ^welcome    ?page=welcome    [NC,L]
+
+# But generic is better, so it accounts for new pages in the known pattern/naming convention
+RewriteRule    ^([A-Za-z]+)$    ?page=$1
+
+# http://mensaplan/index.php?page=day&loc=Mensa&date=2014-01-14
+# we want to follow the pattern http://mensaplan/location/date
+RewriteRule    ^([A-Za-z]+)/((19|20)\d\d[\-\/.](0[1-9]|1[012])[\-\/.](0[1-9]|[12][0-9]|3[01]))$   ?page=day&loc=$1&date=$2

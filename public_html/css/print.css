@@ -1,0 +1,95 @@
+/*
+    Created on : Nov 29, 2013, 12:08:56 PM
+    Author     : kris
+*/
+
+ .container {
+    margin: 0;
+}
+
+section, article {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body, table th a, a.mensa, a:hover.mensa, a:active.mensa, a:visited.mensa, header.feat, tr:hover {
+   color: #000;
+}
+
+a.mensa, a:hover.mensa, a:active.mensa, a:visited.mensa {
+    font-size: 20px;
+}
+
+table th a {
+    font-size: 16px;
+} 
+
+nav, .login, .sw_logo {
+   display: none;
+}
+
+ .container {
+    background: #fff;
+}
+
+.feat {
+    float: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+    border: none;
+}
+
+header.feat {
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.specials {
+    list-style: disc inside;
+}
+
+.feat img {
+    display: none;
+}
+
+.feat header {
+    margin: 0;
+    opacity: 1;
+    height: auto;
+    display: inline-block;
+}
+
+.feat header h2 {
+    margin: 0;
+}
+
+.bd {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.bd_blue, .bd_red, .bd_grn, .bd_yel {
+    border-color: #000;
+}
+
+tr:hover {
+    background: #fff;
+}
+
+tr:hover:nth-child(even) {
+    background: #e0e0e0;
+}
+
+.img_l {
+    width: 125px;
+    height: 125px;
+    float: left;
+    margin-right: 8px;
+    border: none;
+}
+
+@page {
+    margin: .5cm;
+}

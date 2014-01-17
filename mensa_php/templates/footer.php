@@ -5,4 +5,8 @@
 * @author Philipp Hock <philipp.hock@uni-ulm.de>
 */
 defined('SEC_MENSA') or die('Restricted access');
-echo '</body></html>';
+echo '
+    </div>
+    </body>
+</html>
+';

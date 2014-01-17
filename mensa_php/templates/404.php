@@ -5,6 +5,6 @@
     <body>
         <h1>Ooops</h1>
         <h2> Seite wurde nicht gefunden</h2>
-        <a href="/mensaplan">zurück</a>
+        <a href="/">zurück</a>
     </body>
 </html>

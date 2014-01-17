@@ -22,14 +22,29 @@ echo '
         "<title>$title</title>",
         '<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
     </head>
     <body>
-<nav>
-<ul>
-    <li><a href="' .$base .  '?page=welcome">home</a></li>
-    <li><a href="' .$base .  '?page=about">about</a></li>    
-</ul>
-</nav>
-';
-    
-
+        <div class="container">
+        <header role="banner">
+            <hgroup>
+                <h1><a href="/" class="mensa">Mensa</a></h1>
+                <h2>Nourishing brains at Uni Ulm since 1967</h2>
+                <p class="sw_logo">Part of Studentenwerk Ulm</p>
+            </hgroup>
+            <nav>
+                <ul>
+                    <li><a href="' .$base . 'welcome">Home</a></li>
+                    <li><a href="' .$base . 'about">About</a></li>
+                </ul>
+            </nav>
+            <section class="login">
+                <form name="login" action="login" method="get" accept-charset="utf-8">
+                    <input type="text" name="username" placeholder="username" required>
+                    <input type="password" name="password" placeholder="password" required>
+                    <input type="submit" value="Login">
+                </form>
+            </section>
+        </header>
+        ';

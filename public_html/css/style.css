@@ -1,0 +1,390 @@
+/*
+    Created on : Nov 29, 2013, 12:08:56 PM
+    Author     : kris
+
+    NOTE: A better responsive design/layout would make extensive use of ems instead of pixels to set font sizes, 
+    vertical flow elements (i.e. heights), and percentages for horizontal elements (i.e. a column in a 8 column 
+    grid is 12.5% of the total). 
+
+    All layout in this exercise was done on the fly, in the browser, where it was quicker to work directly with 
+    pixels. 
+*/
+
+/*
+    Colors
+    
+    Logo
+        green: #C3D000
+        yellow: #FDC700
+        blue: #267398
+        red: #D75842
+
+    HTML
+        text: #8c8c8c
+        links: logo red
+        background: #f5f5f5
+        table rows: #e0e0e0
+        borders: #c1c1c1
+*/
+
+@media all{
+    /*
+        Text
+    */
+    body {
+        font-size: 13px;
+        line-height: 1.231;
+        color: #8c8c8c;
+        font-family: arial, verdana, sans-serif;
+    }
+
+    article h1 {
+        font-size: 30px;
+    }
+
+    a.mensa, a:hover.mensa, a:active.mensa, a:visited.mensa {
+        font-size: 80px;
+        text-transform: uppercase;
+    }
+    
+    a.mensa, a:hover.mensa, a:active.mensa, a:visited.mensa, header[role="banner"] h2 {
+        color: #267398;
+        opacity: .5;
+    }
+
+    nav a:hover {
+        background: #fff;
+        border-bottom: 2px solid #D75842;
+    }
+
+    nav a {
+        border-bottom: 2px solid #f5f5f5;
+        display: block;
+    }
+
+    nav a, table th a {
+        font-size: 22px;
+        color: #D75842;
+    }
+
+    input[type="text"], input[type="password"], input[type="submit"]  {
+        font-size: 16px;
+    }
+
+    header[role="banner"] h2 {
+        font-size: 12px;
+        font-weight: normal;
+        margin: -20px 0 0 145px;
+    }
+
+    /*
+        Layout
+    */
+    .container {
+        margin: 44px 20px 20px;
+        background: #f5f5f5;
+        overflow: hidden;
+        min-width: 400px;
+    }
+
+    .sw_logo {
+        background: url(../img/logo.png) 0 0 no-repeat;
+        width: 260px;
+        height: 60px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        position: absolute;
+        top: 54px;
+        right: 20px;
+        border-left: 5px solid #fff;
+        border-bottom: 8px solid #fff;
+        border-top: 8px solid #fff;
+    }
+
+    .login {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        margin: 0 20px 0;
+    }
+
+    nav ul {
+        list-style: none;
+    }
+
+    nav li {
+        float: left;
+    }
+
+    header[role="banner"] {
+        overflow: hidden;
+    }
+
+    header[role="banner"] h1 {
+        margin: 0 0 0 20px;
+        padding: 0;
+    }
+
+    .fl {
+        float: left;
+    }
+
+    .fr {
+        float: right;
+    }
+
+    /*
+        Weekly Layout
+    */
+    section, article {
+        overflow: hidden;
+        margin: 45px 20px;
+    }
+
+    .feat {
+        float: left;
+        display: block;
+        width: 275px; 
+        height: 275px;
+        overflow: hidden;
+        padding: 10px;
+        border: 1px solid #c1c1c1;
+        margin: 0 10px 10px 0;
+    }
+
+    .feat header {
+        margin-top: -69px;
+        background: #fff;
+        opacity: .8;
+        height: 50px;
+        padding: 0 0 0 8px;
+    }
+
+    .arrow-right {
+        width: 0; 
+        height: 0; 
+        border-top: 33px solid transparent;
+        border-bottom: 33px solid transparent;
+        border-left: 33px solid #fff;
+        margin-top: 12px;
+    }
+
+    header.feat {
+        background: #C3D000;
+        color: #fff;
+        padding: 10px;
+    }
+    
+    ul.specials {
+        list-style: none;
+        margin: 0;
+        display: inline;
+    }
+    
+    ul.specials li {
+        display: block;
+        float: left;
+    }
+
+    article {
+        margin: 20px;
+    }
+
+    /*
+        Links
+    */
+    a.mensa, a:hover.mensa, a:active.mensa, a:visited.mensa, nav a, nav a:hover, table th a {
+       text-decoration: none; 
+    }
+
+    nav a, nav a:hover {
+        padding: 10px;
+    }
+
+    /*
+        Table
+    */
+    table {
+        text-align: left;
+        width: 100%;
+        border-spacing: 0;
+        margin-bottom: 20px;
+    }
+
+    thead th {
+        background: #fff;
+        border-bottom: 2px solid #8c8c8c;
+        border-top: 2px solid #8c8c8c;
+        padding: 0 10px 0;
+        vertical-align: middle;
+    }
+
+    th:first-child {
+        padding-left: 8px;
+        padding-top: 10px;
+    }
+
+    tr:nth-child(even) {
+        background: #e0e0e0;
+    }
+
+    tr:hover {
+        background: #C3D000;
+        color: #5b5b5b;
+    }
+    
+    th, td {
+        vertical-align: top;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    /*
+        Forms
+    */
+    input[type="submit"] {
+        border: medium none;
+        width: 65px;
+    }
+
+    input[type="text"], input[type="password"]{
+        height: 20px;
+    }
+
+    input[type="submit"] {
+        height: 28px;
+        vertical-align: top;
+    }
+
+    /*
+        Day Layout
+    */
+    .day section {
+        width: 250px;
+        height: 150px;
+        float: left;
+        display: block;
+        overflow: hidden;
+        margin: 0 10px 10px 0;
+        padding: 8px;
+    }
+
+    .day h2 {
+        margin: 0;
+    }
+
+    .bd {
+        border-width: 6px;
+        border-style: solid;
+    }
+
+    .bd_blue {
+        border-color: #267398;
+    }
+
+    .bd_red {
+        border-color: #D75842;
+    }
+
+    .bd_grn {
+        border-color: #C3D000;
+    }
+
+    .bd_yel {
+        border-color: #FDC700;
+    }
+
+    .img_l {
+        width: 125px;
+        height: 125px;
+        float: left;
+        margin-right: 8px;
+        border: 1px solid #c1c1c1;
+    }
+}
+
+/*
+    Screen size specific CSS
+*/
+@media
+only screen and (max-width: 715px), (min-device-width: 720px) and (max-device-width: 1024px) {
+    /* 
+        Force table to not be like tables anymore 
+        Based off responsive data tables: http://css-tricks.com/responsive-data-tables/
+    */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Stews"; }
+	td:nth-of-type(2):before { content: "Quick Plates"; }
+	td:nth-of-type(3):before { content: "Good & Cheap"; }
+	td:nth-of-type(4):before { content: "Vegetarian"; }
+	td:nth-of-type(5):before { content: "Organic"; }
+	td:nth-of-type(6):before { content: "Wok & Grill"; }
+        td:nth-of-type(7):before { content: "Buffet"; }
+}
+
+@media 
+only screen and (max-width: 690px) {
+    .container {
+        margin-top: 111px;
+    }
+    
+    .sw_logo {
+        background: none;
+        border: none;
+        height: auto;
+        width: auto;
+        overflow: auto;
+        position: relative;
+        text-indent: 0;
+        font-style: italic;
+        right: 0;
+        top: 0;
+        margin: 0 0 0 145px;
+        font-size: 12px;
+    }
+    
+    .login {
+        width: 225px;
+    }
+    
+    .login input {
+        margin-bottom: 5px;
+    }
+}

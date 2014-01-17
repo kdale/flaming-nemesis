@@ -18,6 +18,9 @@ define('SEC_MENSA',true);
  */
 $include_dir = __dir__ . '/../mensa_php/';
 include $include_dir  . 'util/Util.php';
+include $include_dir . 'util/RenderHelper.php';
+//include $include_dir . 'util/dbConnect.php';
+//include $include_dir . 'util/login.php';
 //TODO more includes? Login, Database,..??
 include $include_dir  . 'abstracts/Renderable.php';
 include $include_dir  . 'core/MSystem.php';
@@ -26,7 +29,7 @@ include $include_dir  . 'core/MSystem.php';
 /*
  * Bootup the system
  */
-$system = new MSystem($include_dir,"mensaplan");
+$system = new MSystem($include_dir,"");
 $system->start();
 
 
