@@ -10,7 +10,7 @@ class Page implements Renderable{
         return "About";
     }
     public function writeContent(){
-        echo "<p>About::Mensa</p>";
+        echo "<article><p>About::Mensa</p></article>";
     }
 }
 

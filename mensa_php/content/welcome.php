@@ -1,8 +1,8 @@
 <?php
 /**
 * File welcome.php
-* A simple welcome page to test the framework
-* @author Philipp Hock <philipp.hock@uni-ulm.de>
+* Welcome page for Mensa site, shows week view for each Mensa location
+* @author Kristal Dale <kristal.dale@uni-ulm.de>
 */
 defined('SEC_MENSA') or die('Restricted access');
 

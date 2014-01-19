@@ -35,6 +35,7 @@ class Util{
      * 
      * @param string $jsonUrl
      * @return object of the decoded JSON content 
+     * @author Kristal Dale <kristal.dale@uni-ulm.de>
      */
     public static function getJSON($jsonUrl){
         $json = file_get_contents($jsonUrl);
@@ -43,7 +44,7 @@ class Util{
             return json_decode($json); 
         }
         else {
-            return null; // json_decode will also return null on failur
+            return null; // json_decode will also return null on failure
         }
     }
 }

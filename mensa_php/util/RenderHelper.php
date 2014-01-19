@@ -42,16 +42,18 @@ class RenderHelper{
         $html = '';
         
         // find our current day and location
-        foreach($jsonObj->weeks[0]->days as $day) {
-            if ($day->date == $date){ // found our date i.e. valid date
-                if(in_array($location, self::$locs)){ // valid location
-                    $html .= '<article class="day"><h1>' . $location . ' plan for ' . $date . '</h1>';
+        if(!empty($location) && !empty($date)){
+            foreach($jsonObj->weeks[0]->days as $day) {
+                if ($day->date == $date){ // found our date i.e. valid date
+                    if(in_array($location, self::$locs)){ // valid location
+                        $html .= '<article class="day"><h1>' . $location . ' plan for ' . $date . '</h1>';
 
-                    foreach($day->$location->meals as $curMeal) {
-                        $html .= '<Section class="bd ' . self::$cssColors[array_rand(self::$cssColors)] . '"><header><h2>' . $curMeal->category . '</h2></header><img src="/img/demo.jpeg" alt="demo image" class="img_l"/><p>' . $curMeal->meal . '</p></Section>';
+                        foreach($day->$location->meals as $curMeal) {
+                            $html .= '<Section class="bd ' . self::$cssColors[array_rand(self::$cssColors)] . '"><header><h2>' . $curMeal->category . '</h2></header><img src="/img/demo.jpeg" alt="demo image" class="img_l"/><p>' . $curMeal->meal . '</p></Section>';
+                        }
+
+                        $html .= '</article>';
                     }
-
-                    $html .= '</article>';
                 }
             }
         }

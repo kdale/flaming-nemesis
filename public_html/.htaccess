@@ -1,11 +1,17 @@
+# @author Kristal Dale <kristal.dale@uni-ulm.de>
+# Rules are not perfect as the URL structure should be better thought out for a better site-wide pattern/org
+
 RewriteEngine On
-# Absolute matching
-#RewriteRule    ^about    ?page=about    [NC,L]    
-#RewriteRule    ^welcome    ?page=welcome    [NC,L]
 
-# But generic is better, so it accounts for new pages in the known pattern/naming convention
-RewriteRule    ^([A-Za-z]+)$    ?page=$1
+# Absolute matching for specific pages
+RewriteRule    ^about    ?page=about    [NC,L]    
+RewriteRule    ^welcome    ?page=welcome    [NC,L]
 
-# http://mensaplan/index.php?page=day&loc=Mensa&date=2014-01-14
-# we want to follow the pattern http://mensaplan/location/date
-RewriteRule    ^([A-Za-z]+)/((19|20)\d\d[\-\/.](0[1-9]|1[012])[\-\/.](0[1-9]|[12][0-9]|3[01]))$   ?page=day&loc=$1&date=$2
+# Some rules for malformed URLs for location/date - this could also be done in code....
+RewriteRule    ^([a-zA-Z0-9-]+)/?$    ?page=404 [L]
+RewriteRule     ^([a-zA-Z0-9-]+)/(((\d{4})-?){0,1})(((\d\d)-?){0,1})$    ?page=404 [L]
+RewriteRule     ^([a-zA-Z0-9-]+)/(((\d\d)-?){0,2})$    ?page=404 [L]
+
+# rewrite for a specific day and location
+# http://mensaplan/index.php?page=day&loc=Mensa&date=2014-01-14 - we want to follow the pattern http://mensaplan/location/date
+RewriteRule    ^([A-Za-z]+)/((19|20)\d\d[\-\/.](0[1-9]|1[012])[\-\/.](0[1-9]|[12][0-9]|3[01]))/?$   ?page=day&loc=$1&date=$2 [L]

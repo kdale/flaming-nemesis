@@ -1,16 +1,20 @@
-Team Banana - Ueubung 6
+Team Banana - Exercise 6
 
-The provided framework (from class) was used for this exercise.
+The provided php-framework (from class) was used for this exercise.
 
-Followed a normal localhost set up (set up as desired on local machine), for example:
-- www as webroot
+Site setup:
+Installed provided php-framework on localhost (apache install from previous exercise), following standard site setup in apache i.e.
 
-- hosts entry: 
+- Copied php-framework to webroot on local machine (in my case www)
+
+- added hosts entry: 
 127.0.0.1       mensaplan
 
-- httpd_vhosts.config entry:
+- added httpd_vhosts.config entry:
 <VirtualHost *:80>
     DocumentRoot "/www/mensaplan/public_html"
     ServerName mensaplan
 </VirtualHost>
+
+No additional steps were taken to make the provided php-framework run.
 

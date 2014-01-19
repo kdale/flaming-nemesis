@@ -1,7 +1,7 @@
 <?php
 /**
 * File day.php
-* Date specific detail page for the Mensa Plan
+* Date and location specific detail page for the Mensa Plan
 * @author Kristal Dale <kristal.dale@uni-ulm.de>
 */
 defined('SEC_MENSA') or die('Restricted access');
